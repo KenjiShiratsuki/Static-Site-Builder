@@ -5,7 +5,8 @@ from htmlnode import LeafNode, HTMLNode
 class TestLeafNode(unittest.TestCase):
     def test_leaf_node_raises_value_error(self):
         with self.assertRaises(ValueError):
-            LeafNode("p", None)
+            node1 = LeafNode("p", None)
+            string = node1.to_html()
     def test_normal_leaf_node_to_html(self):
         node1 = LeafNode("p", "This is a paragraph")
         self.assertEqual(node1.to_html(), "<p>This is a paragraph</p>")
