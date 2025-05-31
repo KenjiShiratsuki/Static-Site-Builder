@@ -29,3 +29,6 @@ class TestHTMLNode(unittest.TestCase):
         parent = HTMLNode("div", children=[child])
         self.assertEqual(len(parent.children), 1)
         self.assertEqual(parent.children[0].tag, "span")
+
+if __name__ == "__main__":
+    unittest.main()
